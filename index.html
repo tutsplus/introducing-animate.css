@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Animate.css</title>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="animate.css" />
+
+	<style>
+		.container {
+			width: 500px;
+			margin: 5em auto;
+			padding: 2em;
+
+			border: 1px solid #ccc;
+		}
+
+		.box {
+			background-color: tomato;
+			color: white;
+
+			padding: 1.5em;
+
+			cursor: pointer;
+
+			text-align: center;
+		}
+
+		.box:hover {
+			background-color: #333;
+		}
+
+		#newsletter {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container animated fadeInDown">
+		<div class="box animated bounceIn">
+			Hide this box with a cool effect
+		</div>
+	</div>
+
+	<div class="container animated lightSpeedIn">
+		<form action="#" id="newsletter">
+			<input type="text">
+			<button type="button">Join the newsletter</button>
+		</form>
+	</div>
+	
+
+	<!-- Load jQuery -->
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+	<script>
+		$('.box').on('click', function() {
+			$('.container').addClass('fadeOutUp');
+		});
+
+		$('#newsletter button').on('click', function() {
+			$(this).addClass('animated shake');
+		});
+	</script>
+
+</body>
+</html>
